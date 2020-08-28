@@ -1,45 +1,22 @@
+import React, { useState, useEffect } from 'react';
+import Pages from './pages';
 
-import React, { Component } from 'react';
-import Navbar from './Components/Navbar';
-import resumeData from './res_data.js';
-import 'bootstrap/dist/css/bootstrap.css';
-import "./styles/index.scss";
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Navbar resumeData={resumeData}/>
-        //<footer/>
-      </div>
-    );
+function App() {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    // NOTE: Use your username below
+    fetch('https://gitconnected.com/v1/portfolio/shrinivas22')
+      .then(res => res.json())
+      .then(user => {
+        setUser(user);
+      });
+  }, []);
+
+  if (!user) {
+    return <div />;
   }
+
+  return <Pages user={user} />;
 }
 
 export default App;
-
-
-
-
-
-///function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
