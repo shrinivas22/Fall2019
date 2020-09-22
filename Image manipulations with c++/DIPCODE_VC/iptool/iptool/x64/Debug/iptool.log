@@ -1,0 +1,6 @@
+﻿  iptool.cpp
+E:\Project_2-Suresh_1\DIPCODE_VC\iptool\iptool\iptool.cpp(531,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+E:\Project_2-Suresh_1\DIPCODE_VC\iptool\iptool\iptool.cpp(492,14): warning C4101:  'next_pch': unreferenced local variable
+E:\Project_2-Suresh_1\DIPCODE_VC\iptool\iptool\iptool.cpp(488,20): warning C4101:  'str2': unreferenced local variable
+E:\Project_2-Suresh_1\DIPCODE_VC\iptool\iptool\iptool.cpp(492,8): warning C4101:  'pch': unreferenced local variable
+  iptool.vcxproj -> E:\Project_2-Suresh_1\DIPCODE_VC\iptool\x64\Debug\iptool.exe
